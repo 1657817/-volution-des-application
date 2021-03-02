@@ -1,0 +1,53 @@
+﻿<Window x:Class="FormulaireInscription.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FormulaireInscription"
+        mc:Ignorable="d"
+        Title="Formulaire d'inscription" Height="730" Width="400">
+    <Grid>
+        <Label Content="Nouveau participant" Foreground="#FF26008B" HorizontalAlignment="Center"
+               Margin="93, 10, 107, 0" VerticalAlignment="Top" Width="192" FontWeight="Bold" FontSize="16"
+               Background="Transparent" FontFamily="Sitka Heading"/>
+        <Label Content="Nom : " HorizontalAlignment="Left" Margin="35,66,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtNom" Loaded="TxtNom_Focus" HorizontalAlignment="Left" Height="23" Margin="152,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" />
+        <Label Content="Prénom : " HorizontalAlignment="Left" Margin="35,108,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtPrenom" GotFocus="txtPrenom_GotFocus" HorizontalAlignment="Left" Height="23" Margin="152,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
+        <Label Content="Date de naissance" HorizontalAlignment="Left" Margin="35,143,0,0" VerticalAlignment="Top"/>
+        <Calendar Name="cld1" HorizontalAlignment="Left" Margin="152,148,0,0" VerticalAlignment="Top"/>
+        <Label Content="Adresse de courriel" HorizontalAlignment="Left" Margin="35,333,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtCourriel" Text="exemple@email.com" LostFocus="txtCourriel_LostFocus" MouseDoubleClick="txtCourriel_DoubleClick"  HorizontalAlignment="Left" Height="23" Margin="152,333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
+        <Label Content="Région" HorizontalAlignment="Left" Margin="35,364,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="cboRegion" HorizontalAlignment="Left" Margin="152,368,0,0" VerticalAlignment="Top" Width="179">
+            <ComboBoxItem Content="Laurentides" IsSelected="True"/>
+            <ComboBoxItem Content="Laval"/>
+            <ComboBoxItem Content="Lanaudière"/>
+            <ComboBoxItem Content="Montréal"/>
+        </ComboBox>
+        <Label Content="Statut professionnel" HorizontalAlignment="Left" Margin="35,395,0,0" VerticalAlignment="Top"/>
+        <CheckBox Name="chk1" IsThreeState="True" Content="Étudiant" HorizontalAlignment="Left" Margin="151,403,0,0" VerticalAlignment="Top"/>
+        <CheckBox Name="chk2" IsThreeState="True" Content="Salarié" HorizontalAlignment="Left" Margin="151,423,0,0" VerticalAlignment="Top"/>
+        <CheckBox Name="chk3" IsThreeState="True" Content="Recherche de travail" HorizontalAlignment="Left" Margin="151,443,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label" Content="État matrimonial" HorizontalAlignment="Left" Margin="35,462,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="rdb1" Content="Célibataire" GroupName="etat" HorizontalAlignment="Left" Margin="151,468,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="rdb2" Content="Fiancé" GroupName="etat" HorizontalAlignment="Left" Margin="240,468,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="rdb3" Content="Marié" GroupName="etat" HorizontalAlignment="Left" Margin="306,468,0,0" VerticalAlignment="Top"/>
+        <Label Content="Langage de programmation préférés (2 ou +) :" HorizontalAlignment="Left" Margin="35,488,0,0" VerticalAlignment="Top"/>
+        <ListBox Name="lsbInit" SelectionMode="Multiple" HorizontalAlignment="Left" Height="122" Margin="20,519,0,0" VerticalAlignment="Top" Width="120">
+            <ListBoxItem Content="C#"/>
+            <ListBoxItem Content="Java"/>
+            <ListBoxItem Content="Python"/>
+            <ListBoxItem Content="Ruby"/>
+            <ListBoxItem Content="Visual Basic .NET"/>
+            <ListBoxItem Content="Swift"/>
+            <ListBoxItem Content="Kotlin"/>
+            <ListBoxItem Content="Javascript"/>
+        </ListBox>
+        <ListBox Name="lsbFin" SelectionMode="Multiple" HorizontalAlignment="Left" Height="122" Margin="254,519,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Name="btnCopier" Click="btnCopier_Click" Content="Copier >>" HorizontalAlignment="Left" Margin="160,529,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Name="btnVider" Click="btnVider_Click"  Content="&lt;&lt; Vider" HorizontalAlignment="Left" Margin="160,598,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Name="btnValider" Click="btnValider_Click" Content="Valider" HorizontalAlignment="Left" Margin="20,669,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Name="btnAnnuler" Click="btnAnnuler_Click" Content="Annuler" HorizontalAlignment="Left" Margin="254,669,0,0" VerticalAlignment="Top" Width="120"/>
+    </Grid>
+</Window>
