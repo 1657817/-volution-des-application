@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex_Grid", "Ex_Grid\Ex_Grid.csproj", "{BF1DCFF0-6839-4DB3-B38E-ABA3640CC950}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex_StackPanel", "Ex_StackPanel\Ex_StackPanel.csproj", "{612C428D-5021-4330-BB1A-AA862D227819}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF1DCFF0-6839-4DB3-B38E-ABA3640CC950}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF1DCFF0-6839-4DB3-B38E-ABA3640CC950}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF1DCFF0-6839-4DB3-B38E-ABA3640CC950}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF1DCFF0-6839-4DB3-B38E-ABA3640CC950}.Release|Any CPU.Build.0 = Release|Any CPU
+		{612C428D-5021-4330-BB1A-AA862D227819}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{612C428D-5021-4330-BB1A-AA862D227819}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{612C428D-5021-4330-BB1A-AA862D227819}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{612C428D-5021-4330-BB1A-AA862D227819}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C5C0A79-3DB6-434F-A649-E06A717054B1}
+	EndGlobalSection
+EndGlobal

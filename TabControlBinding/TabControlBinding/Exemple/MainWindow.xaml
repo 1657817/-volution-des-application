@@ -1,0 +1,99 @@
+﻿<Window x:Class="Exemple.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exemple"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="MainWindow" Name="Wnd" Height="450" Width="800" Icon="images/flocons.png">
+    <Grid>
+        
+        <TabControl TabStripPlacement="Top">
+            <!--Premier onglet-->
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="images/flocons.png" Height="15"/>
+                        <TextBlock Text="Météo" Foreground="Blue"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid>
+                    <!--Grid ressources-->
+                    <Grid.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="FontSize" Value="25"/>
+                        </Style>
+                    </Grid.Resources>
+
+                    <Grid.Background>
+                        <ImageBrush ImageSource="images/snowing.jpg"/>
+                    </Grid.Background>
+                    
+                    <!--Row and column definitions-->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    
+                    <!--<Border Grid.Row="0" Grid.Column="0" Background="MediumBlue"/>
+                    <Border Grid.Row="0" Grid.Column="1" Background="DarkBlue"/>
+                    <Border Grid.Row="1" Grid.ColumnSpan="2" Background="DarkBlue"/>-->
+                    
+                    <!--Content-->
+                    <Image Grid.Row="0" Grid.Column="0" Source="images/flocons.png"/>
+
+                    <StackPanel Name="splPrevisions" Grid.Column="1" Margin="40, 0, 0, 0" VerticalAlignment="Center">
+                        <!--<TextBlock Name="txbHorloge" Text="{Binding Source={x:Static sys:DateTime.Now}}"/>-->
+                        <TextBlock Name="txbHorloge" Text="PLACEHOLDER"/>
+                        <TextBlock Text="Aujourd'hui -10C"/>
+                        <TextBlock Text="Nuageux avec quelques flocons"/>
+                        <TextBlock Text="Précipitation 80%"/>
+                    </StackPanel>
+
+                    <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Text="Max : -4C     Min : -12C      Ressentie : -15C"
+                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </TabItem>
+            
+            <!--Deuxième onglet-->
+            <TabItem Header="Binding">
+                <StackPanel Margin="15">
+                    <TextBox Name="txtValue" Width="200" HorizontalAlignment="Left"/>
+                    <WrapPanel Margin="0, 10">
+                        <Label Content="Texte saisi : "/>
+                        <!--<Label Name="lblValue" Content="{Binding ElementName=txtValue, Path=Text}"/>-->
+                        <Label Name="lblValue"/>
+                    </WrapPanel>
+                    
+                    <Button Name="btnAccept" Content="Cliquer pour ok" Width="100"/>
+                    <WrapPanel Margin="0, 10, 0, 0">
+                        <Label Content="Contenu du bouton"/>
+                        <!--<TextBox Name="txtTextBtn" Width="150" Text="{Binding ElementName=btnAccept, Path=Content}"/>-->
+                        <TextBox Name="txtTextBtn" Width="150"/>
+                    </WrapPanel>
+                    <WrapPanel Margin="10, 10, 0, 0">
+                        <Label Content="Titre de la fenêtre : "/>
+                        <TextBox Text="{Binding ElementName=Wnd, Path=Title, UpdateSourceTrigger=PropertyChanged}" Width="150"/>
+                    </WrapPanel>
+                    <WrapPanel Margin="0, 10, 0, 0">
+                        <Label Content="Dimension de la fenêtre : "/>
+                        <Label Content="{Binding ElementName=Wnd, Path=Width}" Width="30"/>
+                        <Label Content="x"/>
+                        <Label Content="{Binding ElementName=Wnd, Path=Height}" Width="30"/>
+
+                    </WrapPanel>
+                </StackPanel>
+            </TabItem>
+            <!--Troisième onglet-->
+            <TabItem Header="Onglet3">
+
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

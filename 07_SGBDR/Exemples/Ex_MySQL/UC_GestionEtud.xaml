@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="DataGrid.UC_GestionEtud"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DataGrid"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="450">
+    <UserControl.Resources>
+        <ControlTemplate x:Key="buttonTemplate" TargetType="Button">
+            <Grid>
+                <Ellipse x:Name="ButtonEllipse" Height="30" Width="100" Fill="Orange"/>
+                <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+        </ControlTemplate>
+    </UserControl.Resources>
+    <DockPanel Margin="10">
+        <StackPanel Orientation="Vertical" DockPanel.Dock="Right" Margin="10, 0, 0, 0">
+            <Button Name="btnAjoutEtud" Content="Ajouter" Template="{StaticResource buttonTemplate}" Click="btnAjouterEtudiant_Click"/>
+            <Button Name="btnModifEtud" Content="Modifier" Margin="0, 5" Click="btnModifEtudiant_Click"/>
+            <Button Name="btnSuppEtud" Content="Supprimer" Click="btnSuppEtudiant_Click"/>
+        </StackPanel>
+        <DataGrid SelectionMode="Single" Name="dgEtudiant" VerticalAlignment="Top" HorizontalAlignment="Left"
+                  AutoGenerateColumns="False" RowBackground="Khaki"
+                  AlternatingRowBackground="Lavender"
+                  MouseDoubleClick="LigneDG_dblClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Matricule" Width="2*" Binding="{Binding Matricule}"/>
+                <DataGridTextColumn Header="Prénom" Width="2*" Binding="{Binding Prenom}"/>
+                <DataGridTextColumn Header="Nom" Width="2*" Binding="{Binding Nom}"/>
+            </DataGrid.Columns>
+            <DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal"  Margin="10">
+                        <TextBlock Text="Adresse de courriel : "/>
+                        <TextBlock Text="{Binding Email}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
+        </DataGrid>
+    </DockPanel>
+</UserControl>

@@ -1,0 +1,51 @@
+﻿<Window x:Class="TP01.winCategorie"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TP01"
+        mc:Ignorable="d"
+        Title="winCategorie" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListBox Name="lsbCategorie" SelectionChanged="LsbCategorie_SelectionChanged" Grid.Column="0" Margin="10">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Background="LightBlue" FontSize="14" FontWeight="Bold" Foreground="DarkOliveGreen" Text="{Binding Nom}"/> <!--STYLE-->
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <GroupBox Name="gpbCatSel" VerticalAlignment="Center" Grid.Column="1" Margin="10">
+            <GroupBox.Header>
+                <TextBlock Text="Catégorie sélectionné"/>
+            </GroupBox.Header>
+            <StackPanel Name="stpCatSel" Orientation="Vertical">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0, 0, 0, 10">
+                    <TextBlock Text="Nombre d'utilisation"/>
+                    <TextBlock Name="txbNbUtilisation" Text="0" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0, 10, 0, 0">
+                    <TextBlock Text="Nom de la catégorie"/>
+                    <TextBox Name="txbxCatName"/>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Name="gpbCatNotSel" VerticalAlignment="Center" Grid.Column="1" Margin="10">
+            <GroupBox.Header>
+                <TextBlock Text="Catégorie sélectionné"/>
+            </GroupBox.Header>
+            <TextBlock Text="Aucune catégorie sélectionné" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </GroupBox>
+
+        <StackPanel Grid.Column="2" VerticalAlignment="Center">
+            <Button Name="btnAjouter" Content="Ajouter" Margin="10, 0, 10, 25" Click="BtnAjouter_Click"/>
+            <Button Name="btnModifier" Content="Modifier" Margin="10, 25, 10, 25" Click="BtnModifier_Click"/>
+            <Button Name="btnSupprimer" Content="Supprimer" Margin="10, 25, 10, 25" Click="BtnSupprimer_Click"/>
+            <Button Name="btnRetour" Content="Retour au jeu" Click="BtnRetour_Click" Margin="10, 25, 10, 0"/>
+        </StackPanel>
+    </Grid>
+</Window>

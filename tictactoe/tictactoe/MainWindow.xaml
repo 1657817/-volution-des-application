@@ -1,0 +1,33 @@
+﻿<Window x:Class="Tic_Tac_Toe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tic_Tac_Toe"
+        mc:Ignorable="d"
+        Title="TicTacToe" Height="300" Width="260" WindowStyle="ToolWindow">
+    <Canvas>
+        <!--Lignes-->
+        <Rectangle Height="215" Width="10" Fill="Black" Canvas.Top="10" Canvas.Left="75"></Rectangle>
+        <Rectangle Height="215" Width="10" Fill="Black" Canvas.Top="10" Canvas.Left="150"></Rectangle>
+        <Rectangle Height="10" Width="215" Fill="Black" Canvas.Top="75" Canvas.Left="10"></Rectangle>
+        <Rectangle Height="10" Width="215" Fill="Black" Canvas.Top="150" Canvas.Left="10"></Rectangle>
+        
+        <!--Ligne du haut-->
+        <Button Name="btn1" Content="" Height="60" Canvas.Left="16" Canvas.Top="10" Width="55" FontWeight="bold" FontSize="30" Click="btn_Click"/>
+        <Button Name="btn2" Content="" Height="60" Canvas.Left="90" Canvas.Top="10" Width="55" FontWeight="bold" FontSize="30" Click="btn_Click"/>
+        <Button Name="btn3" Content="" Height="60" Canvas.Left="165" Canvas.Top="10" Width="55" FontWeight="bold" FontSize="30" Click="btn_Click"/>
+
+        <!--Ligne du millieu-->
+        <Button Name="btn4" Content="" Height="60" Canvas.Left="16" Canvas.Top="88" Width="55" FontWeight="bold" FontSize="30" Click="btn_Click"/>
+        <Button Name="btn5" Content="" Height="60" Canvas.Left="90" Canvas.Top="88" Width="55" FontWeight="bold" FontSize="30" Click="btn_Click"/>
+        <Button Name="btn6" Content="" Height="60" Canvas.Left="165" Canvas.Top="88" Width="55" FontWeight="bold" FontSize="30" Click="btn_Click"/>
+
+        <!--Ligne du bas-->
+        <Button Name="btn7" Content="" Height="60" Canvas.Left="16" Canvas.Top="164" Width="55" FontWeight="bold" FontSize="30" Click="btn_Click"/>
+        <Button Name="btn8" Content="" Height="60" Canvas.Left="90" Canvas.Top="164" Width="55" FontWeight="bold" FontSize="30" Click="btn_Click"/>
+        <Button Name="btn9" Content="" Height="60" Canvas.Left="165" Canvas.Top="164" Width="55" FontWeight="bold" FontSize="30" Click="btn_Click"/>
+        
+        <TextBlock Name="tb1" Height="48" TextAlignment="Center" Canvas.Left="36" TextWrapping="Wrap" Text="Joueur O" Canvas.Top="224" Width="161" FontWeight="bold" FontSize="30"/>
+    </Canvas>
+</Window>

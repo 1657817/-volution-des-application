@@ -1,0 +1,8 @@
+Robo Rally:2:6:12:99:Course,Stratégie,Actions simultanées,Mouvement sur grille,Modulaire
+Carcassonne:2:5:8:99:Placement de tuile,Construction d'environnement,Contrôle et influence de zone
+Camel Up:2:8:8:99:Pari,Course,Hasard (dé)
+Pandémie:2:4:8:99:Points d'action,Coopératif,Gestion de main (cartes)
+Bataille navale:2:2:8:99:Guerre,Déduction,Déploiement secret
+Risk:2:6:10:99:Guerre,Hasard (dé),Élimination de joueurs,Développement de territoire,Contrôle et influence de zone
+Monopoly:2:8:8:99:Économie,Négociation,Élimination de joueurs,Hasard (dé)
+Cribble:2:4:10:99:Gestion de main (cartes),Jeu de cartes

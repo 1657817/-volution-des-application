@@ -1,0 +1,24 @@
+﻿<Window x:Class="LabBinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LabBinding"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Name="gPrincipal">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.Row="0" Grid.Column="0">
+            <Button Content="Ecran 1" Margin="0,10,5,10" Width="70px" Click="btnScr1_Click"/>
+            <Button Content="Ecran 2" Margin="5,10,5,10" Width="70px" Click="btnScr2_Click"/>
+            <Button Content="Fermer" Margin="5,10,0,10" Width="70px" Click="btnClose_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

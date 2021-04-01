@@ -1,0 +1,20 @@
+Guerre
+Course
+Économie
+Déduction
+Modulaire
+Stratégie
+Coopératif
+Négociation
+Hasard (dé)
+Jeu de cartes
+Points d'action
+Placement de tuile
+Déploiement secret
+Actions simultanées
+Mouvement sur grille
+Élimination de joueurs
+Gestion de main (cartes)
+Développement de territoire
+Construction d'environnement
+Contrôle et influence de zone
