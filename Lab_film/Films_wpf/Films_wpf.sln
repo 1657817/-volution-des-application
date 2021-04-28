@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIL", "Films_wpf\UIL.csproj", "{72652A18-0093-4DD7-8B45-B8DA2713AFA8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{D7F74333-CA80-4538-9846-3AFD58DF626D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{EAECDC3B-111F-4E09-A8F5-E613BFC15CD2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLogic", "BusinessLogic", "{DC937172-9500-4622-BD85-70E73A946457}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{6A929D42-1AC6-4EFF-9F93-4E04DB57C6D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{004A71F8-307D-407A-A364-3BDACED87EEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72652A18-0093-4DD7-8B45-B8DA2713AFA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72652A18-0093-4DD7-8B45-B8DA2713AFA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72652A18-0093-4DD7-8B45-B8DA2713AFA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72652A18-0093-4DD7-8B45-B8DA2713AFA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A929D42-1AC6-4EFF-9F93-4E04DB57C6D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A929D42-1AC6-4EFF-9F93-4E04DB57C6D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A929D42-1AC6-4EFF-9F93-4E04DB57C6D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A929D42-1AC6-4EFF-9F93-4E04DB57C6D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{004A71F8-307D-407A-A364-3BDACED87EEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{004A71F8-307D-407A-A364-3BDACED87EEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{004A71F8-307D-407A-A364-3BDACED87EEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{004A71F8-307D-407A-A364-3BDACED87EEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{72652A18-0093-4DD7-8B45-B8DA2713AFA8} = {D7F74333-CA80-4538-9846-3AFD58DF626D}
+		{6A929D42-1AC6-4EFF-9F93-4E04DB57C6D0} = {DC937172-9500-4622-BD85-70E73A946457}
+		{004A71F8-307D-407A-A364-3BDACED87EEB} = {EAECDC3B-111F-4E09-A8F5-E613BFC15CD2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9C89671F-298D-4E81-91C4-88EE9685B0A2}
+	EndGlobalSection
+EndGlobal
